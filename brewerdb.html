@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<div id=text>
+
+  <form id="form">
+    <label for="input">Type in the name of a beer!.</label>
+    <input type="text" id="beer-input" class="form-control" placeholder="Don't worry, I'll find you the beer you are looking for!" id="beer-input"><br>
+    
+    <!-- Button triggers new movie to be added -->
+    <input id="search" type="submit" class= "btn btn-success"  value="Find Beer">
+  </form>
+    </div>
+
+<div id=beerinfo>
+
+</div>
+
+
+<script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript">
+
+
+
+ $('#search').on('click', function(event) {
+
+event.preventDefault();
+
+       
+
+     searchBeer = $("#beer-input").val();
+
+		console.log(searchBeer)
+
+        var queryURL = "http://api.brewerydb.com/v2/search?key=71de7818b6d090756b89f6cf32836be5&q=" + searchBeer  + "&type=beer";
+
+
+
+        $.ajax({
+                url: queryURL,
+                method: 'GET'
+            })
+
+ .done(function(response) {
+
+
+
+  var results = response.data;
+console.log(results)
+ })
+})
+
+
+
+
+</script>
+
+  </body>
+</html>

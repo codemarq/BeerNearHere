@@ -1,0 +1,35 @@
+   <html>
+      <head>
+        <title>Test</title>
+
+<script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
+       
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#beer_search").click(function(){
+                    $.post("http://www.thebeerspot.com/api/search", 
+                    { "function" : "beer" , 
+                    "dev_key" : "a04fdf5c638606893a4c676dbdb5c885" , 
+                    "search_term" : "darkness",
+                    "limit" : "5" },  
+                        function(response) {
+                            $.each(response, function() {
+                                $.each(this, function(name, value) {
+                                    // add each item to a div on the page
+                                    $("#display").append(name + " : " + value + "<br />");
+                                });
+                                // throw a line break at the end of each item
+                                $("#display").append("<br />");
+                            });
+                            
+                        });
+                })
+            });
+        </script>
+      </head>
+      <body>
+        <input type="button" id="beer_search" value="Search Beer Darkness"/>
+        <div id="display"></div>
+      </body>
+    </html>  
+    
