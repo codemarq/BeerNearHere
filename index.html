@@ -10,6 +10,10 @@
 	<!-- style.css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+	<!-- custom style sheet for jumbotron imeages etc -->
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+	<!-- <link href="content/style.css rel=stylesheet" /> -->
+
 	<!-- twitter bootstrap Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -28,7 +32,79 @@
 	<!-- firebase -->
 	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 </head>
-<body>
 
+<body>
+	<!-- place for the main title -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 jumbotron">
+				<div class="text-center">
+					<h1>Beer Near Here</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--bootstrap navbar section -->
+	<nav class="navbar navbar-default" role="navigation">
+     	<div class="container-fluid">
+<!--header section -->
+          <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              		<span class="sr-only">Toggle navigation</span>
+               		<span class="icon-bar"></span>
+               		<span class="icon-bar"></span>
+               		<span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">Brand Name</a>
+          </div>
+          <!-- menu section -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+               <ul class="nav navbar-nav navbar-right">
+               <li><a href="# ">Home</a></li>
+               <li><a href="# ">About</a></li>
+               <li><a href="#">Products</a></li>
+               <li><a href="#">Blog</a></li>
+               <li><a href="#">Support</a></li>
+               </ul>
+          </div>
+     </div>
+</nav>
+	<div class="searchbar">
+		<div class="row">
+			<div class="col-md-6">Search function placeholder</div>
+		    	<div id=text>
+
+ 		<form id="form">
+   			<label for="input">Type in the name of a beer!.</label>
+   				<input type="text" id="beer-input" class="form-control" placeholder="Don't worry, I'll find you the beer you are looking for!" id="beer-input"><br>
+   
+   <!-- Button triggers new movie to be added -->
+   <input id="search" type="submit" class= "btn btn-success"  value="Find Beer">
+ </form>
+   </div>
+
+<div id=beerinfo>
+
+</div>
+		    	<div class="beerlist-section">
+				</div>
+					<div class="col-md-6">Unordered list of beer
+					</div>
+			</div>
+		
+	<div class="map-section">
+		<div class="row">
+			<div class="col-md-6">Google map</div>
+		
+		<div class="Directions"></div>
+			<div class="col-md-6">Directions placeholder</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-12">Footer placeholder</div>
+		</div>
+	</div>
 </body>
 </html>

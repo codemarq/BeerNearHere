@@ -1,0 +1,13 @@
+body {
+
+}
+
+.jumbotron {
+    background-color: #DAA520;
+    width: 100%;
+    background-image: url('');
+    background-attachment: fixed;
+    min-height: 400px;
+    margin-top: 0px;
+
+}
